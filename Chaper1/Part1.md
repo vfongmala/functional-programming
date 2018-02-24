@@ -30,10 +30,11 @@ Sample expression
 
 Function application (Haskell)
 - function application is denote using space
--- example
--- `f a b` => f(a,b)
--- `f a b + c*d` => f(a,b) + c*d
--- `f a + b` => f(a) + b
--- `f (g x)` => f(g(x))
--- `f x (g y)` => f(x, g(y))
--- `f x * g y` => f(x)*g(y)
+
+  for example
+  - `f a b` => f(a,b)
+  - `f a b + c*d` => f(a,b) + c*d
+  - `f a + b` => f(a) + b
+  - `f (g x)` => f(g(x))
+  - `f x (g y)` => f(x, g(y))
+  - `f x * g y` => f(x)*g(y)

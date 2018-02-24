@@ -6,7 +6,7 @@ Part 2
 Script
 - use .hs extension
 - start GHCI with the script by
--- ghci <script file name>.hs
+  ghci `<script file name>.hs`
 - function in the script will be available in the command prompt
 
 Commands
@@ -21,6 +21,7 @@ Commands
 Functions
 - `fst (x,y)` -> first argument
 - `snd (x,y)` -> second argument
+- `div (x,y)` -> divide x by y
 
 Boolean
 - `True False` use upper-case
@@ -65,6 +66,4 @@ d = a * 2
 ```
 
 Note:
-- div is enclose with back quote `
-- div is function name of divide
-- x `f` y => f x y (it's just for readability)
+- ```x `f` y``` => f x y (it's just for readability)
