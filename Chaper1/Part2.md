@@ -4,10 +4,9 @@ Part 2
 * All base on Haskell language
 
 Script
-- use .hs extension
-- start GHCI with the script by
-  ghci `<script file name>.hs`
-- function in the script will be available in the command prompt
+- use `.hs` extension
+- start GHCI with the script by type `ghci <script file name>.hs`
+- defined function in the script will be available in the command prompt
 
 Commands
 - `:reload` -> command to reload file

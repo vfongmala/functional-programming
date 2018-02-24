@@ -10,8 +10,8 @@ Installation
 
 Usage
 - Open terminal
-- Type 'ghci'
-- Now can start using Haskell
+- Type `ghci`
+- Now can start using Haskell in GHCI
 
 Sample expression
 - `x^y` -> x power by y
@@ -37,4 +37,26 @@ Function application (Haskell)
   - `f a + b` => f(a) + b
   - `f (g x)` => f(g(x))
   - `f x (g y)` => f(x, g(y))
-  - `f x * g y` => f(x)*g(y)
+  - `f x * g y` => f(x) * g(y)
+
+Example
+``` Haskell
+> 2 + 2
+2
+
+> (+) 2 2
+2
+
+> sqrt(4)
+2
+
+> head [1,2,3,4]
+1
+
+> [1,2,3,4,5] !! 2
+3
+
+> (*) 2 3 + 6 * 7
+48
+
+```
