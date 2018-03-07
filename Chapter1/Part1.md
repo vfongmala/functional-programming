@@ -1,19 +1,19 @@
-Chapter 1: First Step
+# Chapter 1: First Step
 
-Part 1
+## Part 1
 
 Functional Programming using Haskell language
 
-Installation
+### Installation
 - Download Haskell Platform from https://www.haskell.org/platform/
 - Install on the machine
 
-Usage
+### Usage
 - Open terminal
 - Type `ghci`
 - Now can start using Haskell in GHCI
 
-Sample expression
+### Sample expression
 - `x^y` -> x power by y
 - `sqrt(x)` -> square root of x
 - `[1,2,3]` -> list of 1,2,3
@@ -28,7 +28,7 @@ Sample expression
 - `[] ++ []` -> append 2 lists
 - `reverse[]` -> reverse a list
 
-Function application (Haskell)
+### Function application (Haskell)
 - function application is denote using space
 
   for example
@@ -39,7 +39,7 @@ Function application (Haskell)
   - `f x (g y)` => f(x, g(y))
   - `f x * g y` => f(x) * g(y)
 
-Example
+### Example
 ``` Haskell
 > 2 + 2
 2

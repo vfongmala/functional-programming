@@ -1,14 +1,14 @@
-Chapter 1: First Step
+# Chapter 1: First Step
 
-Part 2
+## Part 2
 * All base on Haskell language
 
-Script
+### Script
 - use `.hs` extension
 - start GHCI with the script by type `ghci <script file name>.hs`
 - defined function in the script will be available in the command prompt
 
-Commands
+### Commands
 - `:reload` -> command to reload file
 - `:load <script name>` -> load script
 - `:edit <script name>` -> edit script
@@ -17,21 +17,21 @@ Commands
 - `:?` -> show all commands
 - `:quit` -> quit GHCI
 
-Functions
+### Functions
 - `fst (x,y)` -> first argument
 - `snd (x,y)` -> second argument
 - `div (x,y)` -> divide x by y
 
-Boolean
+### Boolean
 - `True False` use upper-case
 - `not <Bool>` invert of <Bool> value
 
-Naming Requirement
+### Naming Requirement
 - must start with lower-case
 - type start with upper-case
 - list argument always have 's' suffix ie. `xs` `ns`
 
-Layout rule (kinda same as python)
+### Layout rule (kinda same as python)
 - Definitions must begin with same column (whitespace has effect)
 ``` Haskell
 a = 1
@@ -39,7 +39,6 @@ b = 2
 c = 3
 ```
 is correct
-
 ``` Haskell
 a = 1
  b = 2
@@ -64,5 +63,5 @@ a = b + c
 d = a * 2
 ```
 
-Note:
+#### Note:
 - ```x `f` y``` => f x y (it's just for readability)
