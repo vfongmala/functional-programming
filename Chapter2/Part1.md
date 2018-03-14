@@ -1,6 +1,6 @@
 # Chapter 2: Types and Classes
 
-## Part 1 & 2
+## Part 1 - 3
 
 ### Type:
 - `Bool` : boolean `<True|False>`
