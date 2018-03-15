@@ -2,7 +2,7 @@
 
 ## Part 1
 
-### Type: Conditional Expression
+### Conditional Expression:
 
 Conditional expression must always have `else` branch
 
