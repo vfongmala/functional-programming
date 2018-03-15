@@ -11,6 +11,7 @@ main() {
 
   print(g(4))
 
+  // call function f of input x twice
   twice(f,x) => f(f(x))
   //or
   var twice (f,x) => f(f(x))
