@@ -1,6 +1,6 @@
 # Chapter 3: Defining Functions
 
-## Part 1
+## Part 2
 
 ### Lambda Expression:
 
