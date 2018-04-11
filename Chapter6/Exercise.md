@@ -208,3 +208,171 @@ Choose an implementation of `chop8` using `unfold`.
 ```Haskell
 chop8 = unfold null (take 8) (drop 8)
 ```
+
+#### Exercise 12
+Following the previous question, choose an implementation of `map :: (a -> b) -> [a] -> [b]` using `unfold`.
+
+taking into account only finite, non-partial input lists with non-bottom values, and where the mapping function does not return bottom.
+
+**_Answer_**
+```Haskell
+map f = unfold null (f . head) tail
+```
+
+#### Exercise 13
+Choose an implementation of the Prelude function `iterate :: (a -> a) -> a -> [a]` using unfold.
+
+**_Answer_**
+```Haskell
+iterate f = unfold (const False) id f
+```
+
+#### Exercise 14
+Assuming `f`, `g` and `h` are not bottom, the following equality holds for all `f`, `g` and `h` of the correct type:
+
+**_Answer_**
+```Haskell
+f . (g . h) = (f . g) . h
+```
+
+#### Exercise 15
+Which of the following properties about lists is false
+
+**_Answer_**
+```Haskell
+[x] : xs = [x, xs]
+```
+
+#### Exercise 16
+Which of the following properties about `map` and `filter` is true for all `f`, `g` and `p` of the correct type
+
+**_Answer_**
+```Haskell
+filter p . filter p = filter p
+```
+
+#### Exercise 17
+Which of the following is true for all non-bottom `f`, `g` and `p` of the correct type, and finite, non-partial input lists `xs` that contain no bottom values
+
+**_Answer_**
+```Haskell
+reverse (map f xs) = map f (reverse xs)
+```
+
+#### Exercise 18
+Which of the following equations is true for all finite, non-partial lists `xs` and `ys`, with non-bottom values
+
+**_Answer_**
+```Haskell
+reverse (xs ++ ys) = reverse ys ++ reverse xs
+```
+
+#### Exercise 19
+Which of the following expressions produces a finite list
+
+**_Answer_**
+```Haskell
+take 10 [1..]
+```
+
+#### Exercise 20
+Which of the following statements about the Prelude function `sum :: Num a => [a] -> a` is false
+
+**_Answer_**
+```Haskell
+sum is a higher-order function
+```
+
+#### Exercise 21
+Pick one of the wrong statements about the Prelude function `map :: (a -> b) -> [a] -> [b]`
+
+**_Answer_**
+```Haskell
+map is a function with two arguments
+
+map is an overloaded function
+```
+
+#### Exercise 22
+Which of the following statements about the Prelude function `foldr :: (a -> b -> b) -> b -> [a] -> b` is false
+
+**_Answer_**
+```Haskell
+foldr is an overloaded function
+```
+
+#### Exercise 23
+Which of the following statements about various Prelude functions is true
+
+**_Answer_**
+```Haskell
+take is a polymorphic function
+```
+
+#### Exercise 24
+Which equation defines a function f that is overloaded
+
+**_Answer_**
+```Haskell
+f x = x > 3
+```
+
+#### Exercise 25
+Which of the following expressions is equal to [1, 2, 3, 4]
+
+**_Answer_**
+```Haskell
+take 4 (iterate (+1s) 1)
+```
+
+#### Exercise 26
+Evaluating `takeWhile even [2, 4, 5, 6, 7, 8]` gives
+
+**_Answer_**
+```
+[2,4]
+```
+
+#### Exercise 27
+Evaluating `zip [1, 2] ['a', 'b', 'c']` gives
+
+**_Answer_**
+```
+[(1, 'a'), (2, 'b')]
+```
+
+#### Exercise 28
+Evaluating `foldr (-) 0 [1, 2, 3, 4]` gives
+
+**_Answer_**
+```
+1-(2-(3-(4-0)))
+=
+-2
+```
+
+#### Exercise 29
+Evaluating `filter even (map (+1) [1..5])` gives
+
+**_Answer_**
+```
+[2,4,6]
+```
+
+#### Exercise 30
+Which of the following expressions is equal to `filter p (map f xs)`, for all finite, non-partial lists `xs` with no bottom values, and for all non-bottom `f` and `p` of the correct type
+
+**_Answer_**
+```Haskell
+[f x|x ← xs, p (f x)]
+```
+
+#### Exercise 31
+After watching the jam session about Church Numerals, what could be a possible implementation for exponentiation?
+
+`cExp :: CNat -> CNat -> CNat`
+
+**_Answer_**
+```Haskell
+cExp (CNat a) (CNat b) = CNat (b a)
+```

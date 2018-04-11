@@ -8,9 +8,9 @@ The library function `(.)` returns the *composition* of two function as a single
 ```Haskell
 (.)   ∷ (b → c) → (a → b) → (a → c)
 f . g = \x → f (g x)
-// apply (g x) first
+-- apply (g x) first
 
-// example
+-- example
 odd ∷ Int → Bool
 odd = not . even
 ```
@@ -20,7 +20,7 @@ The library function `all` decides if every element of a list satisfies a given 
 all       ∷ (a → Bool) → [a] → Bool
 all p xs  = and [p x | x ← xs]
 
-// example
+-- example
 > all even [2,4,6,8,10]
 True
 ```
@@ -30,7 +30,7 @@ The library function `any` decides if at least one element of a list satisfies a
 any       ∷ (a → Bool) → [a] → Bool
 any p xs  = or [p x | x ← xs]
 
-// example
+-- example
 > any isSpace "abc def"
 True
 ```
@@ -43,7 +43,7 @@ takeWhile p (x:xs)
   | p x       = x : takeWhile p xs
   | otherwise = []
 
-// example
+-- example
 > takeWhile isAlpha "abc def"
 "abc"
 ```
@@ -56,7 +56,7 @@ dropWhile p (x:xs)
   | p x       = dropWhile p xs
   | otherwise = x:xs
 
-// example
+-- example
 > dropWhile isSpace "    abc"
 "abc"
 ```

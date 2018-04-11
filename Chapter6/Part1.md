@@ -21,13 +21,13 @@ twice f x = f (f x)
 `map` function applies function to every element of a list
 ```Haskell
 map :: (a -> b) -> [a] -> [b]
-// define with list comprehension
+-- define with list comprehension
 map f xs = [f x | x <- xs]
-// define with recursion
+-- define with recursion
 map f [] = []
 map f (x:xs) = f x | map f xs
 
-// example
+-- example
 > map (+1) [1,3,5,7]
 [2,4,6,8]
 ```
@@ -36,15 +36,15 @@ map f (x:xs) = f x | map f xs
 `filter` function select every element from a list that match a predicate
 ```Haskell
 filter :: (a -> Bool) -> [a] -> [a]
-// define with list comprehension
-filter p xs = [x | x <- xs, p x] /*if p x is true then append x*/
-//define with recursion
+-- define with list comprehension
+filter p xs = [x | x <- xs, p x] -- if p x is true then append x
+-- define with recursion
 filter p [] = []
 filter p (x:xs)
   | p x       = x : filter p xs
   | otherwise = filter p xs
 
-// example
+-- example
 > filter even [1..10]
 [2,4,6,8,10]
 ```

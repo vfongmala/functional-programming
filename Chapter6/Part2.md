@@ -12,14 +12,14 @@ f (x:xs)  = x (+) f xs
 
 ##### Example
 ```Haskell
-sum []          = 0                 // v = 0
-sum (x:xs)      = x + sum xs        // (+) = +
+sum []          = 0                 -- v = 0
+sum (x:xs)      = x + sum xs        -- (+) = +
 
-product []      = 1                 // v = 1
-product (x:xs)  = x * product xs    // (+) = *
+product []      = 1                 -- v = 1
+product (x:xs)  = x * product xs    -- (+) = *
 
-and []          = True              // v = True
-and (x:xs)      = x && and xs       // (+) = &&
+and []          = True              -- v = True
+and (x:xs)      = x && and xs       -- (+) = &&
 ```
 
 The higher-order library function `foldr` encapsulates this simple pattern of recursion, with the function `(+)` and the value `v` arguments
@@ -37,7 +37,7 @@ and     = foldr (&&) True
 
 `Foldr` itself can be defined using recursion
 ```Haskell
-//       (f == (+))     (v)
+--       (f == (+))     (v)
 foldr ∷ (a → b → b) → b → [a] → b
 foldr f v []      = v
 foldr f v (x:xs)  = f x (foldr f v xs)
@@ -50,8 +50,8 @@ sum [1,2,3]
 foldr (+) 0 [1,2,3]
 =
 foldr (+) 0 (1:(2:(3:[])))
-// replace : by (+)
-// replace [] by 0
+-- replace : by (+)
+-- replace [] by 0
 =
 1+(2+(3+0))
 =
@@ -64,8 +64,8 @@ product [1,2,3]
 foldr (*) 1 [1,2,3]
 =
 foldr (*) 1 (1:(2:3:[]))
-// replace : by (*)
-// replace [] by 1
+-- replace : by (*)
+-- replace [] by 1
 =
 1*(2*(3*1))
 =
@@ -79,12 +79,12 @@ length (_:xs) = 1 + length xs
 
 length = foldr (\_ n → 1+n) 0
 
-// example
+-- example
 length [1,2,3]
 =
 length (1:(2:(3:[])))
-// replace : by \_ n → 1+n
-// replace [] by 0
+-- replace : by \_ n → 1+n
+-- replace [] by 0
 =
 1+(1+(1+0))
 =
@@ -98,12 +98,12 @@ reverse (x:xs)  = reverse xs ++ [x]
 reverse = foldr (\x xs → xs ++ [x]) []
 (++ ys) = folder (:) ys
 
-// example
+-- example
 reverse [1,2,3]
 =
 reverse (1:(2:(3:[])))
-// replace : with \x xs → xs ++ [x]
-// replace [] by []
+-- replace : with \x xs → xs ++ [x]
+-- replace [] by []
 =
 (([] ++ [3]) ++ [2]) ++ [1]
 =
